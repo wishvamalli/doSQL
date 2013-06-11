@@ -57,7 +57,7 @@ parser.add_argument('--delimit', help='Column delimiter', required=False, defaul
 #parser.add_argument('--useDB', help='The file given in --one is a sqlite database.', required = False,action='store_true')
 args = vars(parser.parse_args())
 
-print args
+#print args
 #sys.exit()
 
 
