@@ -1,4 +1,29 @@
 doSQL.py (c) 2013 Wishva Herath
+
+Version = 0.2
+doSQL can now...
+      * read from a pipe
+      * understands either column names or col numbers (col24) in SQL statements
+
+USAGE (revised)
+usage: doSQL.py [-h] [--one ONE] [--two TWO] --sql SQL [--delimit DELIMIT]
+                [--noHeader] [--colAsNum] [--getPipe]
+
+doSQL allows the execution of SQL statements on text files in the command
+line.
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --one ONE          Main text file where the SQL command is executed on
+  --two TWO          Second text file
+  --sql SQL          SQL statement
+  --delimit DELIMIT  Column delimiter
+  --noHeader         The data has no header
+  --colAsNum         Identify columns as numbes (col1,col25)
+  --getPipe          Recieve data from pipe
+
+___________________________________________________________________
+
 Version = 0.1
 
 This python script allows you to execute SQL statements on text files. 
