@@ -3,19 +3,13 @@ import sqlite3
 import sys
 import argparse
 
-#[TODO] enable the scritp to get data sent from pipes
-"""
-for line in sys.stdin:
-    if line == "":
-        break
-        
-        """
-        
 
 #[TODO] enable awk like input of columns
 
 def getHeader(fileName,noHead):
-    """Extracts the one line header from a file to be used as column names. """
+    """
+    Extracts the one line header from a file to be used as column names. 
+    """
     f = open(fileName,"r")
     header = f.readline().strip()
     cList = header.split(d)
