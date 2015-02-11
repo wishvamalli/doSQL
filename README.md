@@ -1,17 +1,26 @@
-doSQL.py (c) 2013 Wishva Herath
+#doSQL  - Run SQL commands on tabular text files
 
+###Revisions
 Version = 0.2
-doSQL can now...
-      * read from a pipe
-      * understands either column names or col numbers (col24) in SQL statements
+doSQL can now read from a pipe and understand either column names or col numbers (col24) in SQL statements
 
-USAGE (revised)
-usage: doSQL.py [-h] [--one ONE] [--two TWO] --sql SQL [--delimit DELIMIT]
-                [--noHeader] [--colAsNum] [--getPipe]
+##Description
+---
+
+Have a text file and need to perform column based filtering and manupilations? Love SQL but do not want to go through the hassle of uploading the file to an SQL database? Then doSQL is for you!!!
 
 doSQL allows the execution of SQL statements on text files in the command
-line.
+line. With doSQL you just need to have python to use SQL on text files.
 
+##Usage (revised)
+---
+~~~python
+usage: doSQL.py [-h] [--one ONE] [--two TWO] --sql SQL [--delimit DELIMIT]
+                [--noHeader] [--colAsNum] [--getPipe]
+~~~
+
+
+~~~
 optional arguments:
   -h, --help         show this help message and exit
   --one ONE          Main text file where the SQL command is executed on
@@ -21,37 +30,27 @@ optional arguments:
   --noHeader         The data has no header
   --colAsNum         Identify columns as numbes (col1,col25)
   --getPipe          Recieve data from pipe
-
-___________________________________________________________________
-
-Version = 0.1
-
-This python script allows you to execute SQL statements on text files. 
-
-doSQL usage
------------
-usage: doSQL.py [-h] --one ONE [--two TWO] --sql SQL [--delimit DELIMIT]
-
-doSQL allows the execution of SQL statements on text files in the command
-line.
-
-optional arguments:
-  -h, --help         show this help message and exit
-  --one ONE          Main text file where the SQL command is executed on
-  --two TWO          Second text file
-  --sql SQL          SQL statement
-  --delimit DELIMIT  Column delimiter
+ 
+~~~
 
 
-doSQL features
--------------
-Can do any SQL statement (SELECT, JOIN, GROUP BY, ORDER etc.)
-Can combine commands by piping
-Can take in different delimiters
-(Relatively) fast
 
-how does doSQL work
--------------------
+
+
+##Features
+---
+* Supports all standard SQL commands.
+* Commands can be chained through pipes.
+* Can process files with any delimiter
+
+
+How does doSQL work
+---
+
+Python come with sqlite built in. What doSQL does is simply take the input text file(s) and create a sqlite database on the fly. Then your sql commands are run agains the database. (Yes its quite simple!)
+
+
+
 1. read  one (or two) text files.
 2. figure out their column names
 3. add them as seperate tables on an SQLite db
