@@ -59,7 +59,7 @@ Python come with sqlite built in. What doSQL does is simply take the input text 
 5. print the results
 
 ## Auto-generated Documentation
-You can find the auto-generated document [here](https://dl.dropboxusercontent.com/u/3432985/web/doSQL/html/index.html).
+You can find the auto-generated document [here] (https://dl.dropboxusercontent.com/u/3432985/web/doSQL/html/index.html). or [here](html/index.html).
 
 ## Download / Links
 Find the project on [GITHUB](https://github.com/wishvamalli/doSQL) [https://github.com/wishvamalli/doSQL].
