@@ -4,6 +4,7 @@
 Version = 0.2
 doSQL can now read from a pipe and understand either column names or col numbers (col24) in SQL statements
 
+
 ##Description
 ---
 
@@ -14,7 +15,7 @@ line. With doSQL you just need to have python to use SQL on text files.
 
 ##Usage (revised)
 ---
-~~~python
+~~~
 usage: doSQL.py [-h] [--one ONE] [--two TWO] --sql SQL [--delimit DELIMIT]
                 [--noHeader] [--colAsNum] [--getPipe]
 ~~~
@@ -56,5 +57,21 @@ Python come with sqlite built in. What doSQL does is simply take the input text 
 3. add them as seperate tables on an SQLite db
 4. execute the SQL
 5. print the results
+
+## Auto-generated Documentation
+You can find the auto-generated document [here](https://dl.dropboxusercontent.com/u/3432985/web/doSQL/html/index.html).
+
+## Download / Links
+Find the project on [GITHUB](https://github.com/wishvamalli/doSQL) [https://github.com/wishvamalli/doSQL].
+
+doSQL was a weekend project by [Wishva Herath](https://au.linkedin.com/in/wishva) 
+
+
+
+ 
+ 
+
+
+
 
 
